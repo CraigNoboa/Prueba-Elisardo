@@ -4,7 +4,7 @@
     --negro: #212121;
     --primario: #ffc107;
     --secundario: #0097a7;
-    --gris: #757575;
+    --gris: #f0f0f0;
 
 }
 
@@ -51,52 +51,140 @@ h1,h2,h3{
 /* Navegacion Principal */
 
 .nav-bg{
-    background-color: var(--secundario);
+    background-color: var(--blanco);
+    padding: 12px 4px;
+    
 }
 
 .navegacion-principal{
     display: flex;
     flex-direction: column;
+    
+    margin: auto;
 }
 
 @media (min-width: 768px){
     .navegacion-principal{
         flex-direction: row;
-        justify-content: space-between;
+        
     }
 }
 
 .navegacion-principal a{
-    color: var(--blanco);
+    color: var(--negro);
     text-decoration: none;
     font-size: 2rem;
     font-weight: normal;
     padding: 1rem;
+    transition: font-weight 0.10s ease-in-out;
+
 }
 
 .navegacion-principal a:hover{
-    background-color: var(--primario);
-    color: var(--negro);
+    font-weight: 700;
+
+    
 }
+
+.main{
+    display: flex;
+    gap: 48px;
+}
+
+.contenedor{
+    padding-top: 1rem; 
+     
+}
+
+.caja{
+    width: fit-content;
+    height: 100vh;
+    background-color:var(--blanco);
+    text-align: left;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: var(--blanco);
+    display: none;
+    
+}
+
+@media (min-width: 900px) {
+    .caja{
+        display: flex;
+}
+
+        
+}
+
+.caja2{
+    padding-top: 1rem;
+}
+
+.caja2 ul{
+    margin: 0px 3rem;
+}
+
+.caja2 ul li{
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.caja2 ul li a{
+    color: var(--negro);
+    font-size: 28px;
+    padding: 1rem 3rem;
+    display: block;
+    text-decoration: none;
+    margin-top: 5rem;
+    font-weight: normal;
+    transition: font-weight 0.10s ease-in-out;
+    
+}
+
+.caja2 ul li a:hover{
+    font-weight: 700;
+
+    
+}
+
 
 .caja-gatos {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Esto es para lograr que las imagenes esten de forma horinzontal */ 
+    justify-content: center;
+    gap: 16px;
+    padding: 30px;
+    width: 100%;
 }
+
 
 @media (min-width: 768px){ /* Esto es para lograr que se ponga en columnas con el responsive */ 
     .caja-gatos{
         flex-direction: row;
         justify-content: space-between;
+        
     }
+}
+
+.cajita{
+    
+   background-color: var(--blanco);
+   padding: 40px 32px;
+   border-radius: 20px;
+
+
+
 }
 
 .gatos{
 
-height: 250px;
-width: 250px;
+
+width: 100%;
 padding: 2rem;
+border: 0.6rem solid var(--gris);
+border-radius: 1rem;
+
 
 }
 
